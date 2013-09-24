@@ -1,0 +1,13 @@
+{
+  "name" : "My Awersome Project",
+  "version" : "1.0.0",
+  "dependencies" : {
+    "requirejs" : "2.1.8",
+    "jquery" : "1.8",
+    "json2"    : "latest",
+    "underscore": "latest",
+    "modernizr" : null,
+    "mustache" : null,
+    "backbone": "1.0.0"
+  }
+}

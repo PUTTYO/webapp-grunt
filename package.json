@@ -1,0 +1,21 @@
+{
+  "name": "gruntTest",
+  "version": "0.0.1",
+  "description": "test",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "YUJI",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.6.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-regarde": "~0.1.1",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-livereload": "~0.1.2",
+    "grunt-jasmine-node": "~0.1.0"
+  }
+}
