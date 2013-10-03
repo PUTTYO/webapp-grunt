@@ -1,8 +1,7 @@
-define([
-    "backbone"
-], function (
+define(["backbone"], function (
     Backbone
 ) {
+    "use strict";
     //Model
     var Task = Backbone.Model.extend({
         defaults : {
@@ -11,7 +10,6 @@ define([
         }
     });
     var task = new Task();
-
     //view
     var TaskView = Backbone.View.extend({
         tagName: 'li',
