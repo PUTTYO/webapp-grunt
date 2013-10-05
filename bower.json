@@ -1,0 +1,71 @@
+{
+    "name": "My Ryotaro Project",
+    "version": "1.0.0",
+    "dependencies": {
+        "underscore": "*",
+        "jquery": "~2.0.3",
+        "backbone": "1.0.0",
+        "backbone.localStorage": "latest",
+        "backbone-super": "*",
+        "createjs-tweenjs": "git://github.com/CreateJS/TweenJS",
+        "flow": "https://github.com/uupaa/flow.js",
+        "json2": "*",
+        "modernizr": "*",
+        "mustache": "*",
+        "smartjs": "http://smartjs.net/js/smart-0.8.6.js",
+        "tmlib.js": "git://github.com/phi1618/tmlib.js.git"
+    },
+    "homepage": "https://github.com/PUTTYO/webapp-grunt",
+    "authors": [
+        "Yuji Mori"
+    ],
+    "description": "must to be ...",
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "publicHtml/jsVendor",
+        "test",
+        "tests"
+    ],
+    "exportsOverride": {
+        "underscore" : {
+            "js": "**/*.js"
+        },
+        "jquery" : {
+            "js": "**/*.js"
+        },
+        "backbone" : {
+            "js": "**/*.js"
+        },
+        "backbone.localStorage" : {
+            "js": "**/*.js"
+        },
+        "backbone-super" : {
+            "js": "**/*.js"
+        },
+        "createjs-tweenjs" : {
+            "js": "**/*.js"
+        },
+        "flow" : {
+            "js": "**/*.js"
+        },
+        "json2" : {
+            "js": "**/*.js"
+        },
+        "modernizr" : {
+            "js": "**/*.js"
+        },
+        "mustache" : {
+            "js": "**/*.js"
+        },
+        "smartjs" : {
+            "js": "**/*.js"
+        },
+        "tmlib.js" : {
+            "js": "**/*.js"
+        }
+    }
+}

@@ -1,4 +1,4 @@
 {
-  "directory": "publicHtml/js/vendor",
-  "json": "component.json"
+  "directory": "bower_components",
+  "json": "bower.json"
 }
