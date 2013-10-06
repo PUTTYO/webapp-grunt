@@ -40,6 +40,12 @@ module.exports = function(grunt) {
                 }
             }
         },
+        html: {
+            options: {
+                livereload: true
+            },
+            file: 'publicHtml/**/*.html'
+        },
         //ここから監視
         //監視したファイルに動きがあれば、taskを呼び出す。
         watch: {
@@ -54,7 +60,7 @@ module.exports = function(grunt) {
                     livereload: true
                 },
                 files: 'publicHtml/app/**/*.js',
-                tasks: ['jshint', 'jasmine']
+                tasks: ['html', 'jasmine']
             },
             css: {
                 options: {
@@ -88,6 +94,5 @@ module.exports = function(grunt) {
     }
 
     // 追記
-    grunt.registerTask('default', ['connect', 'cssmin', 'watch', 'jasmine',
-                                   'jshint']);
+    grunt.registerTask('default', ['connect', 'cssmin', 'watch', 'jasmine']);
 };
