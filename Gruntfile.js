@@ -15,22 +15,65 @@ module.exports = function(grunt) {
                 }
             }
         },
-        connect: {
-            server: {
-                options: {
-                    port: 9000,
-                    //hostname: 'localhost'
-                    hostname: '10.10.10.168',
-                    livereload: true
-                }
-            }
-        },
         jshint: {
             options: {
                 node: true
             },
             files: {
                 src: ['publicHtml/app/**/*.js']
+            }
+        },
+        jst: {
+            option: {
+                processName: function (name) {
+                    return name.match(/((?:smartphone|pc)\/.*).html$/)[1];
+                },
+                procesContent: function (src) {
+                    return src.replace(/(^\s+|\s+$)/gm, '');
+                },
+                amd: true
+            },
+            smartphone: {
+                files: {
+                    'publicHtml/js/jst/smartphone.js':
+                    ['public_html/js/templates/smartphone/**/*.html']
+                }
+            }
+        },
+        requirejs: {
+            options: {
+                mainConfigFile: './public_html/js/require.config.js',
+                baseUrl: './public_html/js',
+                paths: {
+                    requirejs: 'vendor/requirejs/require'
+                },
+                include: ['requirejs'],
+                optimize: 'none'
+            },
+            smartphone: {
+                options: {
+                    out: 'public_html/js/dist/smartphone.js',
+                    name: 'src/smartphone'
+                }
+            }
+        },
+        uglify: {
+            smartphone: {
+                files: {
+                    'public_html/js/dist/smartphone.min.js': [
+                        'public_html/js/dist/smartphone.js'
+                    ]
+                }
+            }
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 9000,
+                    //hostname: 'localhost'
+                    hostname: '*',
+                    livereload: true
+                }
             }
         },
         cssmin: {
@@ -89,5 +132,5 @@ module.exports = function(grunt) {
 
     // 追記
     grunt.registerTask('default', ['connect', 'cssmin', 'watch', 'jasmine',
-                                   'jshint']);
+        'jshint']);
 };

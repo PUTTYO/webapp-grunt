@@ -2,11 +2,12 @@
     "name": "My Ryotaro Project",
     "version": "1.0.0",
     "dependencies": {
-        "underscore": "*",
-        "jquery": "~2.0.3",
-        "backbone": "1.0.0",
+        "requirejs": "latest",
+        "underscore": "latest",
+        "jquery": "latest",
+        "backbone": "latest",
         "backbone.localStorage": "latest",
-        "backbone-super": "*",
+        "backbone-super": "latest",
         "createjs-tweenjs": "git://github.com/CreateJS/TweenJS",
         "flow": "https://github.com/uupaa/flow.js",
         "json2": "*",
@@ -31,6 +32,9 @@
         "tests"
     ],
     "exportsOverride": {
+        "requirejs" : {
+            "js": "**/*.js"
+        },
         "underscore" : {
             "js": "**/*.js"
         },
