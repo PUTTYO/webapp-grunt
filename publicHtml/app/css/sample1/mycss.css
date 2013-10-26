@@ -1,0 +1,54 @@
+/* コメント */
+/* */
+not body {
+    background-color: red;
+    background-image: url('bg.png');
+    background-repeat: no-repeat;
+    background-position: top, right;
+    background-attachment: scroll;
+}
+
+#box1 {
+    background-color:red;
+    width:50px;
+    height:50px;
+
+    /*
+    border-color: green;
+    border-width: 5px;
+    border-style: solid;
+    */
+
+    border: green 5px inset;
+}
+
+p {
+    color: green;
+    font-size: 36px;
+    /* font-size: 200%; */
+    font-weight: bold;
+    text-align: right;
+
+    line-height: 30px;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+h1 {
+    color: red;
+}
+
+/* id */
+#main {
+    font-size:36px;
+}
+
+/* class */
+.test {
+    font-size:9px;
+}
+
+/* any */
+#main, .test {
+    border: 1px solid #ccc;
+}

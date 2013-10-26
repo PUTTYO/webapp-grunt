@@ -90,7 +90,7 @@ module.exports = function(grunt) {
                 options: {
                     livereload: true
                 },
-                files: 'publicHtml/**/*.html'
+                files: ['publicHtml/**/*.html', 'publicHtml/**/*.css']
             },
             js: {
                 options: {
