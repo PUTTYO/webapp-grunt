@@ -85,26 +85,26 @@ module.exports = function(grunt) {
         },
         //ここから監視
         //監視したファイルに動きがあれば、taskを呼び出す。
-        watch: {
-            html: {
-                options: {
-                    livereload: true
-                },
-                files: ['publicHtml/**/*.html', 'publicHtml/**/*.css']
+        esteWatch: {
+            options: {
+                dirs: [
+                    'publicHtml/**/'
+                ],
+                livereload: {
+                    enabled: 'true',
+                    port: 35729,
+                    extensions: ['html', 'js', 'less', 'css', 'swp']
+                }
             },
-            js: {
-                options: {
-                    livereload: true
-                },
-                files: 'publicHtml/app/**/*.js',
-                tasks: ['jshint', 'jasmine']
+            less: function(filepath) {
+                return 'less';
             },
-            css: {
-                options: {
-                    livereload: true
-                },
-                files: ['publicHtml/app/**/*.css'],
-                tasks: ['cssmin']
+            js: function(filepath) {
+                grunt.config(['jshint', 'files'], filepath);
+                return ['jshint', 'jasmine'];
+            },
+            html: function(filepath) {
+                return 'jst';
             }
         },
         jasmine: {
@@ -131,6 +131,6 @@ module.exports = function(grunt) {
     }
 
     // 追記
-    grunt.registerTask('default', ['connect', 'cssmin', 'watch', 'jasmine',
+    grunt.registerTask('default', ['connect', 'cssmin', 'esteWatch', 'jasmine',
         'jshint']);
 };

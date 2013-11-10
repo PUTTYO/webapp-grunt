@@ -34,7 +34,7 @@
     ],
     "exportsOverride": {
         "requirejs" : {
-            "js": "**/*.js"
+            "js": "*.js"
         },
         "underscore" : {
             "js": "**/*.js"
