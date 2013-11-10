@@ -15,6 +15,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+        //javascriptシンタックスチェック
         jshint: {
             options: {
                 node: true
@@ -70,9 +71,8 @@ module.exports = function(grunt) {
             server: {
                 options: {
                     port: 9000,
-                    //hostname: 'localhost'
                     hostname: '*',
-                    livereload: true
+                    base: ['./', './publicHtml/']
                 }
             }
         },

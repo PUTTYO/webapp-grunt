@@ -14,7 +14,8 @@
         "modernizr": "*",
         "mustache": "*",
         "smartjs": "http://smartjs.net/js/smart-0.8.6.js",
-        "tmlib.js": "git://github.com/phi1618/tmlib.js.git"
+        "tmlib.js": "git://github.com/phi1618/tmlib.js.git",
+        "sha1.js": "http://labs.cybozu.co.jp/blog/mitsunari/2007/07/24/js/sha1.js"
     },
     "homepage": "https://github.com/PUTTYO/webapp-grunt",
     "authors": [
@@ -69,6 +70,9 @@
             "js": "**/*.js"
         },
         "tmlib.js" : {
+            "js": "**/*.js"
+        },
+        "sha1.js" : {
             "js": "**/*.js"
         }
     }
